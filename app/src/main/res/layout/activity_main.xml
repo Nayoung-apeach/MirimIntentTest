@@ -1,51 +1,54 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit1"
-        android:layout_margin="10dp"
-        android:hint="입력1"/>
+        android:id="@+id/input_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <EditText
+        android:id="@+id/input_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RadioButton
+        android:id="@+id/radioadd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/edit2"
-        android:layout_margin="10dp"
-        android:hint="입력2"/>
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="더하기"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:id="@+id/btnMin"
-        android:text="빼기"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:id="@+id/btnMul"
-        android:text="곱하기"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:id="@+id/btnDiv"
-        android:text="나누기"/>
-    <TextView
+        android:text="더하기"
+        />
+    <RadioButton
+        android:id="@+id/radiominus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/TextRes"
-        android:textSize="30sp"
-        android:textColor="#FF0000"
-        android:layout_margin="10dp"
-        android:text="계산결과: "/>
+        android:text="빼기" />
+    <RadioButton
+        android:id="@+id/radiomul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="곱하기"
+        />
+    <RadioButton
+        android:id="@+id/radiodiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나누기"
+        />
+    </RadioGroup>
+    <Button
+        android:id="@+id/btnCal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="계산하기"
+        />
 </LinearLayout>
